@@ -1,0 +1,10 @@
+{
+  "name": "mongodb",
+  "image": "mongo:latest",
+  "root_user": "root",
+  "root_rpassword": "password",
+  "user": "novu",
+  "password": "novu",
+  "dbname": "novu-db",
+  "env_vars": {}
+}

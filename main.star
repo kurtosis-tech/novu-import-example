@@ -1,21 +1,113 @@
-# NOTE: If you're a VSCode user, you might like our VSCode extension: https://marketplace.visualstudio.com/items?itemName=Kurtosis.kurtosis-extension
-
-# https://docs.kurtosis.com/starlark-reference/import-module
-# TODO replace the 'github.com/kurtosis-tech/package-template-repo' below with your Github username and repo name
-lib = import_module("github.com/kurtosis-tech/package-template-repo/lib/lib.star")
-
 NAME_ARG = "name"
+USER_ARG = "user"
+PASSWORD_ARG = "password"
+ROOT_USER_ARG = "root_user"
+ROOT_PASSWORD_ARG = "root_password"
+IMAGE_ARG = "image"
+ENV_VARS_ARG = "env_vars"
+DB_NAME_ARG = "dbname"
 
-# For more information on...
-#  - the 'run' function:  https://docs.kurtosis.com/concepts-reference/packages#runnable-packages
-#  - the 'plan' object:   https://docs.kurtosis.com/starlark-reference/plan
-#  - the 'args' object:   https://docs.kurtosis.com/next/concepts-reference/args
+PORT_NAME = "mongodb"
+PORT_NUMBER = 27017
+PROTOCOL_NAME = "mongodb"
+
 def run(plan, args):
-    name = args.get(NAME_ARG, "John Snow")
-    plan.print("Hello, " + name)
+    service_name = args.get(NAME_ARG, "mongodb")
+    image = args.get(IMAGE_ARG, "mongo:6.0.5")
+    root_user = args.get(ROOT_USER_ARG, "root")
+    root_password = args.get(ROOT_PASSWORD_ARG, "password")
+    user = args.get(USER_ARG, "root")
+    password = args.get(PASSWORD_ARG, "password")
+    dbname = args.get(DB_NAME_ARG, "")
+    env_var_overrides = args.get(ENV_VARS_ARG, {
+        "PUID": "1000",
+        "PGID": "1000",
+    })
 
-    # https://docs.kurtosis.com/starlark-reference/plan#upload_files
-    # TODO replace the 'github.com/kurtosis-tech/package-template-repo' below with your Github username and repo name
-    config_json = plan.upload_files("github.com/kurtosis-tech/package-template-repo/static-files/config.json")
+    env_vars = {
+        "MONGO_INITDB_ROOT_USERNAME": root_user,
+        "MONGO_INITDB_ROOT_PASSWORD": root_password,
+    }
+    env_vars |= env_var_overrides
 
-    lib.run_hello(plan, config_json)
+    # Add the server
+    service = plan.add_service(
+        name=service_name,
+        config=ServiceConfig(
+            image=image,
+            ports={
+                PORT_NAME: PortSpec(
+                    number=PORT_NUMBER,
+                    application_protocol=PROTOCOL_NAME
+                ),
+            },
+            env_vars=env_vars,
+        ),
+    )
+
+    url = "{protocol}://{user}:{password}@{hostname}:{port}/{dbname}".format(
+        protocol = PROTOCOL_NAME,
+        user = user,
+        password = password,
+        hostname = service.hostname,
+        port = PORT_NUMBER,
+        dbname = dbname
+    )
+
+    if dbname != '':
+        mongodb_local_url = "mongodb://localhost:%d/%s" % (PORT_NUMBER, dbname)
+
+        command_create_user = "db.getSiblingDB('%s').createUser({user:'%s', pwd:'%s', roles:[{role:'readWrite',db:'%s'}]});" % (
+            dbname, user, password, dbname
+        )
+        exec_create_user = ExecRecipe(
+            command=[
+                "mongosh",
+                "-u",
+                root_user,
+                "-p",
+                root_password,
+                "-eval",
+                command_create_user
+            ],
+        )
+
+        plan.wait(
+            service_name=service_name,
+            recipe=exec_create_user,
+            field="code",
+            assertion="==",
+            target_value=0,
+            timeout="30s",
+        )
+
+        command_create_collection = "db.getSiblingDB('%s').createCollection('%s');" % (
+            dbname, dbname
+        )
+
+        exec_create_collection = ExecRecipe(
+            command=[
+                "mongosh",
+                mongodb_local_url,
+                "-u",
+                user,
+                "-p",
+                password,
+                "-eval",
+                command_create_collection
+            ],
+        )
+
+        plan.wait(
+            service_name=service_name,
+            recipe=exec_create_collection,
+            field="code",
+            assertion="==",
+            target_value=0,
+            timeout="30s",
+        )
+
+    return struct(
+        service=service,
+        url=url,
+    )
