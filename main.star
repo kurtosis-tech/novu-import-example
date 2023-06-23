@@ -19,14 +19,13 @@ def run(plan, args):
     user = args.get(USER_ARG, "root")
     password = args.get(PASSWORD_ARG, "password")
     dbname = args.get(DB_NAME_ARG, "")
-    env_var_overrides = args.get(ENV_VARS_ARG, {
-        "PUID": "1000",
-        "PGID": "1000",
-    })
+    env_var_overrides = args.get(ENV_VARS_ARG, {})
 
     env_vars = {
         "MONGO_INITDB_ROOT_USERNAME": root_user,
         "MONGO_INITDB_ROOT_PASSWORD": root_password,
+        "PUID": "1000",
+        "PGID": "1000",
     }
     env_vars |= env_var_overrides
 
