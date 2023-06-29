@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "name": "Test",
+  "partnerConfigurations": [],
+  "createdAt": {
+    "$date": "2023-06-14T12:29:00.649Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:36:05.238Z"
+  },
+  "__v": 0,
+  "branding": {
+    "color": "#f47373",
+    "fontFamily": "inherit"
+  }
+}]

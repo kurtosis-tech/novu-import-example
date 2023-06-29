@@ -53,6 +53,7 @@ def run(plan, args):
         dbname = dbname
     )
 
+    # If database is set, create a new database with custom user
     if dbname != '':
         mongodb_local_url = "mongodb://localhost:%d/%s" % (PORT_NUMBER, dbname)
 

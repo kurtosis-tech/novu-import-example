@@ -10,7 +10,7 @@ Open
 and run:
 
 ```bash
-kurtosis run github.com/kurtosis-tech/mongodb-package
+kurtosis run github.com/kurtosis-tech/novu-import-example
 ```
 
 To run it locally, [install Kurtosis][install-kurtosis] and run the same.
@@ -49,14 +49,14 @@ and should be removed!):
 These arguments can either be provided manually:
 
 ```bash
-kurtosis run github.com/kurtosis-tech/mongodb-package '{"image":"mongo:latest"}'
+kurtosis run github.com/kurtosis-tech/novu-import-example '{"image":"mongo:latest"}'
 ```
 
 or by loading via a file, for instance using the [args.json](args.json) file in
 this repo:
 
 ```bash
-kurtosis run github.com/kurtosis-tech/mongodb-package --enclave mongo "$(cat args.json)"
+kurtosis run github.com/kurtosis-tech/novu-import-example --enclave mongo "$(cat args.json)"
 ```
 
 </details>
@@ -70,7 +70,7 @@ First, import this package by adding the following to the top of your Starlark
 file:
 
 ```python
-this_package = import_module("github.com/kurtosis-tech/mongodb-package/main.star")
+this_package = import_module("github.com/kurtosis-tech/novu-import-example/main.star")
 ```
 
 Then, call this package's `run` function somewhere in your Starlark script:

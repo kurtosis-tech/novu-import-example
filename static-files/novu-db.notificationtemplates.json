@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "6489b40d03c3ba252d83290f"
+  },
+  "name": "Test",
+  "active": true,
+  "draft": false,
+  "critical": false,
+  "isBlueprint": false,
+  "_notificationGroupId": {
+    "$oid": "6489b28c03c3ba252d8327af"
+  },
+  "tags": [],
+  "triggers": [
+    {
+      "type": "event",
+      "identifier": "test",
+      "variables": [],
+      "subscriberVariables": [
+        {
+          "name": "email",
+          "_id": {
+            "$oid": "6489b4c103c3ba252d832a3f"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "6489b40d03c3ba252d832910"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "active": true,
+      "replyCallback": {
+        "active": false
+      },
+      "shouldStopOnFail": false,
+      "uuid": "d991fdbf-7659-48b7-8e39-1d632bf766ce",
+      "name": "Email",
+      "filters": [
+        {
+          "children": [],
+          "_id": {
+            "$oid": "6489b4c103c3ba252d832a3e"
+          }
+        }
+      ],
+      "_templateId": {
+        "$oid": "6489b4c103c3ba252d832a34"
+      },
+      "_parentId": null,
+      "metadata": {
+        "timed": {
+          "weekDays": [],
+          "monthDays": []
+        }
+      },
+      "_id": {
+        "$oid": "6489b4c103c3ba252d832a34"
+      }
+    }
+  ],
+  "preferenceSettings": {
+    "email": true,
+    "sms": true,
+    "in_app": true,
+    "chat": true,
+    "push": true
+  },
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_creatorId": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2023-06-14T12:35:25.433Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:38:25.451Z"
+  },
+  "__v": 0
+}]

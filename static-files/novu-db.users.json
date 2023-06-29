@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "firstName": "test",
+  "lastName": "user",
+  "email": "test@user.com",
+  "password": "$2b$10$MayTlxr2jEXgs95C89V.q.YrisxPChXKJH.uarlScBtN80P09tC.e",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2023-06-14T12:28:55.289Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:28:55.289Z"
+  },
+  "__v": 0
+}]

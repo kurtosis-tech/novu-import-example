@@ -1,0 +1,631 @@
+[{
+  "_id": {
+    "$oid": "6489b28c03c3ba252d8327b1"
+  },
+  "enabled": false,
+  "type": "NotificationGroup",
+  "change": [
+    {
+      "op": "add",
+      "path": [
+        "name"
+      ],
+      "val": "General"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_organizationId"
+      ],
+      "val": "6489b28c03c3ba252d8327a5"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_environmentId"
+      ],
+      "val": "6489b28c03c3ba252d8327ab"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_id"
+      ],
+      "val": "6489b28c03c3ba252d8327af"
+    },
+    {
+      "op": "add",
+      "path": [
+        "createdAt"
+      ],
+      "val": "2023-06-14T12:29:00.669Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "updatedAt"
+      ],
+      "val": "2023-06-14T12:29:00.669Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "__v"
+      ],
+      "val": 0
+    },
+    {
+      "op": "add",
+      "path": [
+        "id"
+      ],
+      "val": "6489b28c03c3ba252d8327af"
+    }
+  ],
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_entityId": {
+    "$oid": "6489b28c03c3ba252d8327af"
+  },
+  "_creatorId": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "createdAt": {
+    "$date": "2023-06-14T12:29:00.677Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:29:00.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6489b29a03c3ba252d8327cb"
+  },
+  "enabled": false,
+  "type": "DefaultLayout",
+  "change": [
+    {
+      "op": "add",
+      "path": [
+        "_id"
+      ],
+      "val": "6489b29a03c3ba252d8327b6"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_environmentId"
+      ],
+      "val": "6489b28c03c3ba252d8327ab"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_organizationId"
+      ],
+      "val": "6489b28c03c3ba252d8327a5"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_creatorId"
+      ],
+      "val": "6489b28703c3ba252d83279a"
+    },
+    {
+      "op": "add",
+      "path": [
+        "name"
+      ],
+      "val": "Default Layout"
+    },
+    {
+      "op": "add",
+      "path": [
+        "description"
+      ],
+      "val": "The default layout created by Novu"
+    },
+    {
+      "op": "add",
+      "path": [
+        "variables"
+      ],
+      "val": [
+        {
+          "name": "branding.logo",
+          "type": "String",
+          "required": false,
+          "defaultValue": "",
+          "_id": "6489b29a03c3ba252d8327b7"
+        },
+        {
+          "name": "preheader",
+          "type": "Boolean",
+          "required": false,
+          "defaultValue": true,
+          "_id": "6489b29a03c3ba252d8327b8"
+        },
+        {
+          "name": "preheader",
+          "type": "String",
+          "required": false,
+          "defaultValue": "",
+          "_id": "6489b29a03c3ba252d8327b9"
+        },
+        {
+          "name": "branding.color",
+          "type": "Boolean",
+          "required": false,
+          "defaultValue": true,
+          "_id": "6489b29a03c3ba252d8327ba"
+        },
+        {
+          "name": "branding.color",
+          "type": "String",
+          "required": false,
+          "defaultValue": "",
+          "_id": "6489b29a03c3ba252d8327bb"
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "path": [
+        "content"
+      ],
+      "val": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html\n  data-editor-version=\"2\"\n  class=\"sg-campaigns\"\n  xmlns=\"http://www.w3.org/1999/xhtml\"\n>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n  <meta\n    name=\"viewport\"\n    content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"\n  />\n  <!--[if !mso]><!-->\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n  <!--<![endif]-->\n  <!--[if (gte mso 9)|(IE)]>\n  <xml>\n    <o:OfficeDocumentSettings>\n      <o:AllowPNG />\n      <o:PixelsPerInch>96</o:PixelsPerInch>\n    </o:OfficeDocumentSettings>\n  </xml>\n  <![endif]-->\n  <!--[if (gte mso 9)|(IE)]>\n  <style type='text/css'>\n    body {\n      width: 600px;\n      margin: 0 auto;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    table,\n    td {\n      mso-table-lspace: 0pt;\n      mso-table-rspace: 0pt;\n    }\n\n    img {\n      -ms-interpolation-mode: bicubic;\n    }\n  </style>\n  <![endif]-->\n  <style type=\"text/css\">\n    body,\n    p,\n    div {\n      font-family: verdana, geneva, sans-serif;\n      font-size: 16px;\n    }\n\n    body {\n      color: #516775;\n    }\n\n    body a {\n      color: #993300;\n      text-decoration: none;\n    }\n\n    p {\n      margin: 0;\n      padding: 0;\n    }\n\n    table.wrapper {\n      width: 100% !important;\n      table-layout: fixed;\n      -webkit-font-smoothing: antialiased;\n      -webkit-text-size-adjust: 100%;\n      -moz-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n    }\n\n    img.max-width {\n      max-width: 100% !important;\n    }\n\n    .column.of-2 {\n      width: 50%;\n    }\n\n    .column.of-3 {\n      width: 33.333%;\n    }\n\n    .column.of-4 {\n      width: 25%;\n    }\n\n    @media screen and (max-width: 480px) {\n\n      .preheader .rightColumnContent,\n      .footer .rightColumnContent {\n        text-align: left !important;\n      }\n\n      .preheader .rightColumnContent div,\n      .preheader .rightColumnContent span,\n      .footer .rightColumnContent div,\n      .footer .rightColumnContent span {\n        text-align: left !important;\n      }\n\n      .preheader .rightColumnContent,\n      .preheader .leftColumnContent {\n        font-size: 80% !important;\n        padding: 5px 0;\n      }\n\n      table.wrapper-mobile {\n        width: 100% !important;\n        table-layout: fixed;\n      }\n\n      img.max-width {\n        height: auto !important;\n        max-width: 100% !important;\n      }\n\n      a.bulletproof-button {\n        display: block !important;\n        width: auto !important;\n        font-size: 80%;\n        padding-left: 0 !important;\n        padding-right: 0 !important;\n      }\n\n      .columns {\n        width: 100% !important;\n      }\n\n      .column {\n        display: block !important;\n        width: 100% !important;\n        padding-left: 0 !important;\n        padding-right: 0 !important;\n        margin-left: 0 !important;\n        margin-right: 0 !important;\n      }\n\n      .social-icon-column {\n        display: inline-block !important;\n      }\n    }\n  </style>\n  <!--user entered Head Start-->\n\n  <!--End Head user entered-->\n</head>\n<body bgcolor=\"#f9f9f9\">\n{{#if preheader}}\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">\n    {{preheader}}\n    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;\n  </div>\n{{/if}}\n<center\n  class=\"wrapper\"\n  data-link-color=\"#993300\"\n  data-body-style=\"font-size:16px; font-family:verdana,geneva,sans-serif; color:#516775; background-color:#f9f9f9;\"\n>\n  <div class=\"webkit\">\n    <table\n      cellpadding=\"0\"\n      cellspacing=\"0\"\n      border=\"0\"\n      width=\"100%\"\n      class=\"wrapper\"\n      bgcolor=\"#f9f9f9\"\n    >\n      <tr>\n        <td valign=\"top\" bgcolor=\"#f9f9f9\" width=\"100%\">\n          <table\n            width=\"100%\"\n            role=\"content-container\"\n            class=\"outer\"\n            align=\"center\"\n            cellpadding=\"0\"\n            cellspacing=\"0\"\n            border=\"0\"\n          >\n            <tr>\n              <td width=\"100%\">\n                <table\n                  width=\"100%\"\n                  cellpadding=\"0\"\n                  cellspacing=\"0\"\n                  border=\"0\"\n                >\n                  <tr>\n                    <td>\n                      <!--[if mso]>\n                      <center>\n                        <table>\n                          <tr>\n                            <td width='600'>\n                      <![endif]-->\n                      <table\n                        width=\"100%\"\n                        cellpadding=\"0\"\n                        cellspacing=\"0\"\n                        border=\"0\"\n                        style=\"width: 100%; max-width: 600px\"\n                        align=\"center\"\n                      >\n                        <tr>\n                          <td\n                            role=\"modules-container\"\n                            style=\"\n                                  padding: 0px 0px 0px 0px;\n                                  color: #516775;\n                                  text-align: left;\n                                \"\n                            bgcolor=\"#f9f9f9\"\n                            width=\"100%\"\n                            align=\"left\"\n                          >\n                            <table\n                              class=\"wrapper\"\n                              role=\"module\"\n                              data-type=\"image\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"4UqFsRLozLcypAAv4CeoFS\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"\n                                          font-size: 6px;\n                                          line-height: 10px;\n                                          padding: 30px 0px 0px 0px;\n                                        \"\n                                  valign=\"top\"\n                                  align=\"center\"\n                                >\n                                  <img\n                                    class=\"max-width\"\n                                    border=\"0\"\n                                    style=\"\n                                            display: block;\n                                            color: #000000;\n                                            text-decoration: none;\n                                            font-family: Helvetica, arial,\n                                              sans-serif;\n                                            font-size: 16px;\n                                            max-width: 240px !important;\n                                            width: 50%;\n                                            height: auto !important;\n                                          \"\n                                    src=\"{{branding.logo}}\"\n                                    alt=\"\"\n                                    width=\"200\"\n                                    data-responsive=\"true\"\n                                    data-proportionally-constrained=\"false\"\n                                  />\n                                </td>\n                              </tr>\n                              </tbody>\n                            </table>\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"spacer\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"iqe7juSSgLbdm3gXWExpsY\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"padding: 0px 0px 30px 0px\"\n                                  role=\"module-content\"\n                                  bgcolor=\"\"\n                                ></td>\n                              </tr>\n                              </tbody>\n                            </table>\n\n\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"text\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"      background-color: #ffffff; border: 1px solid #efefef; table-layout: fixed; border-top: 4px solid {{#if branding.color}}{{branding.color}}{{else}}#ff6f61{{/if}};  \"\n                              data-muid=\"8VquPM2ZMj7RJRhAUE6wmF\"\n                              data-mc-module-version=\"2019-10-22\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  data-test-id=\"block-wrapper\"\n                                  style=\"\n\n                                          padding: 30px;\n                                          line-height: 30px;\n                                          text-align: inherit;\n                                        \"\n                                  height=\"100%\"\n                                  valign=\"top\"\n                                  bgcolor=\"#ffffff\"\n                                >\n                                  {{{body}}}\n                                </td>\n                              </tr>\n                              </tbody>\n                            </table>\n\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"spacer\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"h5Act64miE4yjzNnz1YMGs\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"padding: 0px 0px 30px 0px\"\n                                  role=\"module-content\"\n                                  bgcolor=\"\"\n                                ></td>\n                              </tr>\n                              </tbody>\n                            </table>\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"divider\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"jw3c3eYnz3qZ2aqby3rNPX\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"padding: 0px 0px 0px 0px\"\n                                  role=\"module-content\"\n                                  height=\"100%\"\n                                  valign=\"top\"\n                                  bgcolor=\"\"\n                                >\n\n                                </td>\n                              </tr>\n                              </tbody>\n                            </table>\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"spacer\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"noXVUxSTfKbdSVM2Xrua2t\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"padding: 0px 0px 30px 0px\"\n                                  role=\"module-content\"\n                                  bgcolor=\"\"\n                                ></td>\n                              </tr>\n                              </tbody>\n                            </table>\n                            <table\n                              class=\"module\"\n                              role=\"module\"\n                              data-type=\"spacer\"\n                              border=\"0\"\n                              cellpadding=\"0\"\n                              cellspacing=\"0\"\n                              width=\"100%\"\n                              style=\"table-layout: fixed\"\n                              data-muid=\"eAq5DwvRYWV4D7T3oBCXhH\"\n                            >\n                              <tbody>\n                              <tr>\n                                <td\n                                  style=\"padding: 0px 0px 30px 0px\"\n                                  role=\"module-content\"\n                                  bgcolor=\"\"\n                                ></td>\n                              </tr>\n                              </tbody>\n                            </table>\n                          </td>\n                        </tr>\n                      </table>\n                      <!--[if mso]>\n                      </td>\n                      </tr>\n                      </table>\n                      </center>\n                      <![endif]-->\n                    </td>\n                  </tr>\n                </table>\n              </td>\n            </tr>\n          </table>\n        </td>\n      </tr>\n    </table>\n  </div>\n</center>\n</body>\n</html>\n"
+    },
+    {
+      "op": "add",
+      "path": [
+        "contentType"
+      ],
+      "val": "customHtml"
+    },
+    {
+      "op": "add",
+      "path": [
+        "isDefault"
+      ],
+      "val": true
+    },
+    {
+      "op": "add",
+      "path": [
+        "channel"
+      ],
+      "val": "email"
+    },
+    {
+      "op": "add",
+      "path": [
+        "deleted"
+      ],
+      "val": false
+    },
+    {
+      "op": "add",
+      "path": [
+        "createdAt"
+      ],
+      "val": "2023-06-14T12:29:14.353Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "updatedAt"
+      ],
+      "val": "2023-06-14T12:29:14.353Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "__v"
+      ],
+      "val": 0
+    },
+    {
+      "op": "add",
+      "path": [
+        "id"
+      ],
+      "val": "6489b29a03c3ba252d8327b6"
+    }
+  ],
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_entityId": {
+    "$oid": "6489b29a03c3ba252d8327b6"
+  },
+  "_creatorId": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "createdAt": {
+    "$date": "2023-06-14T12:29:14.378Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:29:14.378Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6489b40d03c3ba252d83290e"
+  },
+  "enabled": false,
+  "type": "NotificationTemplate",
+  "change": [
+    {
+      "op": "add",
+      "path": [
+        "preferenceSettings"
+      ],
+      "val": {
+        "email": true,
+        "sms": true,
+        "in_app": true,
+        "chat": true,
+        "push": true
+      }
+    },
+    {
+      "op": "add",
+      "path": [
+        "_id"
+      ],
+      "val": "6489b40d03c3ba252d83290f"
+    },
+    {
+      "op": "add",
+      "path": [
+        "name"
+      ],
+      "val": "Test"
+    },
+    {
+      "op": "add",
+      "path": [
+        "active"
+      ],
+      "val": true
+    },
+    {
+      "op": "add",
+      "path": [
+        "draft"
+      ],
+      "val": false
+    },
+    {
+      "op": "add",
+      "path": [
+        "critical"
+      ],
+      "val": false
+    },
+    {
+      "op": "add",
+      "path": [
+        "isBlueprint"
+      ],
+      "val": false
+    },
+    {
+      "op": "add",
+      "path": [
+        "_notificationGroupId"
+      ],
+      "val": "6489b28c03c3ba252d8327af"
+    },
+    {
+      "op": "add",
+      "path": [
+        "tags"
+      ],
+      "val": []
+    },
+    {
+      "op": "add",
+      "path": [
+        "triggers"
+      ],
+      "val": [
+        {
+          "type": "event",
+          "identifier": "test",
+          "variables": [],
+          "subscriberVariables": [
+            {
+              "name": "email",
+              "_id": "6489b4c103c3ba252d832a3f"
+            }
+          ],
+          "_id": "6489b40d03c3ba252d832910"
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "path": [
+        "steps"
+      ],
+      "val": [
+        {
+          "replyCallback": {
+            "active": false
+          },
+          "metadata": {
+            "timed": {
+              "weekDays": [],
+              "monthDays": []
+            }
+          },
+          "active": true,
+          "shouldStopOnFail": false,
+          "uuid": "d991fdbf-7659-48b7-8e39-1d632bf766ce",
+          "name": "Email",
+          "filters": [
+            {
+              "children": [],
+              "_id": "6489b4c103c3ba252d832a3e"
+            }
+          ],
+          "_templateId": "6489b4c103c3ba252d832a34",
+          "_parentId": null,
+          "_id": "6489b4c103c3ba252d832a34",
+          "id": "6489b4c103c3ba252d832a34"
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "path": [
+        "_environmentId"
+      ],
+      "val": "6489b28c03c3ba252d8327ab"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_organizationId"
+      ],
+      "val": "6489b28c03c3ba252d8327a5"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_creatorId"
+      ],
+      "val": "6489b28703c3ba252d83279a"
+    },
+    {
+      "op": "add",
+      "path": [
+        "deleted"
+      ],
+      "val": false
+    },
+    {
+      "op": "add",
+      "path": [
+        "createdAt"
+      ],
+      "val": "2023-06-14T12:35:25.433Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "updatedAt"
+      ],
+      "val": "2023-06-14T12:38:25.451Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "__v"
+      ],
+      "val": 0
+    },
+    {
+      "op": "add",
+      "path": [
+        "id"
+      ],
+      "val": "6489b40d03c3ba252d83290f"
+    }
+  ],
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_entityId": {
+    "$oid": "6489b40d03c3ba252d83290f"
+  },
+  "_creatorId": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "createdAt": {
+    "$date": "2023-06-14T12:35:25.448Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:38:25.464Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6489b4c103c3ba252d832a37"
+  },
+  "enabled": false,
+  "type": "MessageTemplate",
+  "change": [
+    {
+      "op": "add",
+      "path": [
+        "_id"
+      ],
+      "val": "6489b4c103c3ba252d832a34"
+    },
+    {
+      "op": "add",
+      "path": [
+        "type"
+      ],
+      "val": "email"
+    },
+    {
+      "op": "add",
+      "path": [
+        "active"
+      ],
+      "val": true
+    },
+    {
+      "op": "add",
+      "path": [
+        "subject"
+      ],
+      "val": "Hello Test"
+    },
+    {
+      "op": "add",
+      "path": [
+        "variables"
+      ],
+      "val": []
+    },
+    {
+      "op": "add",
+      "path": [
+        "content"
+      ],
+      "val": [
+        {
+          "type": "text",
+          "content": "Hello world!",
+          "styles": {
+            "textAlign": "left"
+          }
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "path": [
+        "contentType"
+      ],
+      "val": "editor"
+    },
+    {
+      "op": "add",
+      "path": [
+        "preheader"
+      ],
+      "val": ""
+    },
+    {
+      "op": "add",
+      "path": [
+        "senderName"
+      ],
+      "val": "Test User"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_environmentId"
+      ],
+      "val": "6489b28c03c3ba252d8327ab"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_organizationId"
+      ],
+      "val": "6489b28c03c3ba252d8327a5"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_creatorId"
+      ],
+      "val": "6489b28703c3ba252d83279a"
+    },
+    {
+      "op": "add",
+      "path": [
+        "_feedId"
+      ],
+      "val": null
+    },
+    {
+      "op": "add",
+      "path": [
+        "_layoutId"
+      ],
+      "val": "6489b29a03c3ba252d8327b6"
+    },
+    {
+      "op": "add",
+      "path": [
+        "createdAt"
+      ],
+      "val": "2023-06-14T12:38:25.437Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "updatedAt"
+      ],
+      "val": "2023-06-14T12:38:25.437Z"
+    },
+    {
+      "op": "add",
+      "path": [
+        "__v"
+      ],
+      "val": 0
+    },
+    {
+      "op": "add",
+      "path": [
+        "id"
+      ],
+      "val": "6489b4c103c3ba252d832a34"
+    }
+  ],
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_entityId": {
+    "$oid": "6489b4c103c3ba252d832a34"
+  },
+  "_creatorId": {
+    "$oid": "6489b28703c3ba252d83279a"
+  },
+  "_parentId": {
+    "$oid": "6489b40d03c3ba252d83290e"
+  },
+  "createdAt": {
+    "$date": "2023-06-14T12:38:25.446Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:38:25.446Z"
+  },
+  "__v": 0
+}]
