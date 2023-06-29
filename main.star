@@ -11,6 +11,11 @@ PORT_NAME = "mongodb"
 PORT_NUMBER = 27017
 PROTOCOL_NAME = "mongodb"
 
+SNAPSHOT_FILES_SOURCE_PATH = "github.com/kurtosis-tech/novu-import-example/static-files"
+SNAPSHOT_FILES_LABEL = "mongodb_snapshot_files"
+SNAPSHOT_FILES_TARGET_PATH = "/opt/mongodb/snapshots"
+
+
 def run(plan, args):
     service_name = args.get(NAME_ARG, "mongodb")
     image = args.get(IMAGE_ARG, "mongo:6.0.5")
@@ -29,6 +34,11 @@ def run(plan, args):
     }
     env_vars |= env_var_overrides
 
+    plan.upload_files(
+        src=SNAPSHOT_FILES_SOURCE_PATH,
+        name=SNAPSHOT_FILES_LABEL
+    )
+
     # Add the server
     service = plan.add_service(
         name=service_name,
@@ -41,6 +51,9 @@ def run(plan, args):
                 ),
             },
             env_vars=env_vars,
+            files={
+                SNAPSHOT_FILES_TARGET_PATH: SNAPSHOT_FILES_LABEL
+            }
         ),
     )
 
@@ -55,59 +68,66 @@ def run(plan, args):
 
     # If database is set, create a new database with custom user
     if dbname != '':
-        mongodb_local_url = "mongodb://localhost:%d/%s" % (PORT_NUMBER, dbname)
+        # Create user
+        create_user(plan, service_name, dbname, user, password, root_user, root_password)
 
-        command_create_user = "db.getSiblingDB('%s').createUser({user:'%s', pwd:'%s', roles:[{role:'readWrite',db:'%s'}]});" % (
-            dbname, user, password, dbname
-        )
-        exec_create_user = ExecRecipe(
-            command=[
-                "mongosh",
-                "-u",
-                root_user,
-                "-p",
-                root_password,
-                "-eval",
-                command_create_user
-            ],
-        )
-
-        plan.wait(
-            service_name=service_name,
-            recipe=exec_create_user,
-            field="code",
-            assertion="==",
-            target_value=0,
-            timeout="30s",
-        )
-
-        command_create_collection = "db.getSiblingDB('%s').createCollection('%s');" % (
-            dbname, dbname
-        )
-
-        exec_create_collection = ExecRecipe(
-            command=[
-                "mongosh",
-                mongodb_local_url,
-                "-u",
-                user,
-                "-p",
-                password,
-                "-eval",
-                command_create_collection
-            ],
-        )
-
-        plan.wait(
-            service_name=service_name,
-            recipe=exec_create_collection,
-            field="code",
-            assertion="==",
-            target_value=0,
-            timeout="30s",
-        )
+        # If there are dumped collections in static-files dir, then
+        restore_collection(plan, service_name, dbname, user, password)
 
     return struct(
         service=service,
         url=url,
+    )
+
+def create_user(plan, service_name, dbname, user, password, root_user, root_password):
+    command_create_user = "db.getSiblingDB('%s').createUser({user:'%s', pwd:'%s', roles:[{role:'readWrite',db:'%s'}]});" % (
+        dbname, user, password, dbname
+    )
+    exec_create_user = ExecRecipe(
+        command=[
+            "mongosh",
+            "-u",
+            root_user,
+            "-p",
+            root_password,
+            "-eval",
+            command_create_user
+        ],
+    )
+
+    plan.wait(
+        service_name=service_name,
+        recipe=exec_create_user,
+        field="code",
+        assertion="==",
+        target_value=0,
+        timeout="30s",
+    )
+
+def restore_collection(plan, service_name, dbname, user, password):
+    collection_name = "messagetemplates"
+    exec_load_dump = ExecRecipe(
+        command=[
+            "mongoimport",
+            "-u",
+            user,
+            "-p",
+            password,
+            "-d",
+            dbname,
+            "-c",
+            collection_name,
+            "--file",
+            "%s/%s.%s.json" % (SNAPSHOT_FILES_TARGET_PATH, dbname, collection_name),
+            "--jsonArray"
+        ],
+    )
+
+    plan.wait(
+        service_name=service_name,
+        recipe=exec_load_dump,
+        field="code",
+        assertion="==",
+        target_value=0,
+        timeout="30s",
     )
