@@ -72,31 +72,6 @@ def run(plan, args):
         create_user(plan, service_name, dbname, user, password, root_user, root_password)
 
         # If there are dumped collections in static-files dir, then
-        result = plan.run_python(
-            run = """
-                import sys
-                import os
-                import re
-
-                directory = sys.argv[1]
-                pattern = sys.argv[2] + r"\.(.*?)\.json"
-                for filename in os.listdir(directory):
-                    if re.match(pattern, filename):
-                        middle_word = re.search(pattern, filename).group(1)
-                        print(middle_word)
-            """,
-            args = [
-                SNAPSHOT_FILES_TARGET_PATH,
-                dbname
-            ],
-            packages = [],
-            image = "python:3.11-alpine",
-            files={
-                SNAPSHOT_FILES_TARGET_PATH: SNAPSHOT_FILES_LABEL
-            },
-        )
-        plan.print(result.output)
-        
         restore_collection(plan, service_name, dbname, user, password)
 
     return struct(
@@ -130,21 +105,16 @@ def create_user(plan, service_name, dbname, user, password, root_user, root_pass
     )
 
 def restore_collection(plan, service_name, dbname, user, password):
-    collection_name = "messagetemplates"
     exec_load_dump = ExecRecipe(
         command=[
-            "mongoimport",
+            "mongorestore",
             "-u",
             user,
             "-p",
             password,
             "-d",
             dbname,
-            "-c",
-            collection_name,
-            "--file",
-            "%s/%s.%s.json" % (SNAPSHOT_FILES_TARGET_PATH, dbname, collection_name),
-            "--jsonArray"
+            SNAPSHOT_FILES_TARGET_PATH,
         ],
     )
 
