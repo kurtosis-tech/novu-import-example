@@ -72,7 +72,7 @@ def run(plan, args):
         create_user(plan, service_name, dbname, user, password, root_user, root_password)
 
         # If there are dumped collections in static-files dir, then
-        restore_collection(plan, service_name, dbname, user, password)
+        restore_collection(plan, service_name, root_user, root_password)
 
     return struct(
         service=service,
@@ -104,7 +104,7 @@ def create_user(plan, service_name, dbname, user, password, root_user, root_pass
         timeout="30s",
     )
 
-def restore_collection(plan, service_name, dbname, user, password):
+def restore_collection(plan, service_name, user, password):
     exec_load_dump = ExecRecipe(
         command=[
             "mongorestore",
@@ -112,9 +112,7 @@ def restore_collection(plan, service_name, dbname, user, password):
             user,
             "-p",
             password,
-            "-d",
-            dbname,
-            SNAPSHOT_FILES_TARGET_PATH,
+            "--archive=" + SNAPSHOT_FILES_TARGET_PATH + "/db.dump",
         ],
     )
 
