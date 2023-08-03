@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6489b28c03c3ba252d8327af"
+  },
+  "name": "General",
+  "_organizationId": {
+    "$oid": "6489b28c03c3ba252d8327a5"
+  },
+  "_environmentId": {
+    "$oid": "6489b28c03c3ba252d8327ab"
+  },
+  "createdAt": {
+    "$date": "2023-06-14T12:29:00.669Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-14T12:29:00.669Z"
+  },
+  "__v": 0
+}]
